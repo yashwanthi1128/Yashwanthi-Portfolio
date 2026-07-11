@@ -1,0 +1,120 @@
+import { useState, useEffect } from 'react'
+
+const NAV_ITEMS = ['about','skills','projects','internship','certifications','achievements','contact']
+
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled,  setScrolled]  = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50)
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  return (
+    <nav style={{
+      position: 'fixed', top: 0, width: '100%',
+      background: 'rgba(10,15,44,0.95)',
+      backdropFilter: 'blur(12px)',
+      padding: '1rem 2rem',
+      display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+      zIndex: 1000,
+      borderBottom: '1px solid rgba(100,255,218,0.08)',
+      boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.4)' : 'none',
+      transition: 'box-shadow 0.3s',
+    }}>
+      {/* LOGO */}
+      <div style={{
+        color: 'var(--green)', fontWeight: 700,
+        fontSize: '1.4rem', letterSpacing: '1px',
+        fontFamily: 'var(--font-mono)'
+      }}>
+        YP
+      </div>
+
+      {/* NAV LINKS — desktop */}
+      <div style={{display: 'flex', gap: '0.5rem', alignItems: 'center'}}
+           className="nav-desktop">
+        {NAV_ITEMS.map(item => (
+          <a key={item} href={`#${item}`}
+             style={{
+               color: 'var(--text)', textDecoration: 'none',
+               fontSize: '0.82rem', letterSpacing: '0.5px',
+               padding: '6px 10px', borderRadius: '4px',
+               transition: 'color 0.3s',
+               fontFamily: 'var(--font-mono)',
+             }}
+             onMouseEnter={e => e.target.style.color = 'var(--green)'}
+             onMouseLeave={e => e.target.style.color = 'var(--text)'}
+          >
+            {item.charAt(0).toUpperCase() + item.slice(1)}
+          </a>
+        ))}
+        {/* RESUME BUTTON */}
+        <a href="/Resume_Yashwanthi(6).pdf"
+           download="Resume_Yashwanthi(6).pdf"
+           style={{
+             display: 'inline-flex', alignItems: 'center', gap: '7px',
+             fontFamily: 'var(--font-mono)', fontSize: '0.78rem',
+             color: 'var(--green)', border: '1px solid var(--green)',
+             padding: '8px 16px', borderRadius: '4px',
+             textDecoration: 'none', marginLeft: '12px',
+             transition: 'all 0.3s',
+           }}
+           onMouseEnter={e => {
+             e.currentTarget.style.background = 'var(--green)'
+             e.currentTarget.style.color = 'var(--navy)'
+           }}
+           onMouseLeave={e => {
+             e.currentTarget.style.background = 'transparent'
+             e.currentTarget.style.color = 'var(--green)'
+           }}
+        >
+          <i className="fa-solid fa-file-arrow-down"></i>
+          Resume
+        </a>
+      </div>
+
+      {/* HAMBURGER — mobile */}
+      <button onClick={() => setMenuOpen(o => !o)}
+              style={{
+                display: 'none', flexDirection: 'column',
+                gap: '5px', background: 'none',
+                border: 'none', cursor: 'pointer',
+              }}
+              className="hamburger-btn">
+        {[0,1,2].map(i => (
+          <span key={i} style={{
+            width: '24px', height: '2px',
+            background: 'var(--green)', borderRadius: '2px',
+            display: 'block',
+          }}/>
+        ))}
+      </button>
+
+      {/* MOBILE MENU */}
+      {menuOpen && (
+        <div style={{
+          position: 'absolute', top: '100%',
+          left: 0, width: '100%',
+          background: 'rgba(10,15,44,0.98)',
+          padding: '1.5rem 2rem',
+          display: 'flex', flexDirection: 'column', gap: '1rem',
+          borderBottom: '1px solid rgba(100,255,218,0.1)',
+        }}>
+          {NAV_ITEMS.map(item => (
+            <a key={item} href={`#${item}`}
+               onClick={() => setMenuOpen(false)}
+               style={{
+                 color: 'var(--text)', textDecoration: 'none',
+                 fontSize: '0.9rem', fontFamily: 'var(--font-mono)',
+               }}>
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+            </a>
+          ))}
+        </div>
+      )}
+    </nav>
+  )
+}
