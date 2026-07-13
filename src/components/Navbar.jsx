@@ -53,7 +53,7 @@ export default function Navbar() {
         ))}
         {/* RESUME BUTTON */}
         <a
-         href="/YashResume.pdf"
+         href="/resume/YashResume.pdf"
          target="_blank"
         rel="noopener noreferrer"
         className="resume-btn"
