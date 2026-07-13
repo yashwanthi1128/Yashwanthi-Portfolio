@@ -93,7 +93,13 @@ export default function Contact() {
         <p className="section-label">Let's connect</p>
         <h2 className="section-title">Get In Touch</h2>
         <div className="green-line"></div>
-        <div className="contact-grid">
+        <div
+  className="contact-grid"
+  style={{
+    display: "grid",
+    gap: "4rem",
+  }}
+>
 
           {/* INFO */}
           <div>

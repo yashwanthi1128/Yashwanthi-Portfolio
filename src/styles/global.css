@@ -157,7 +157,7 @@ main, nav, footer { position: relative; z-index: 1; }
   font-size: 0.88rem;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   background: transparent;
   transition: background 0.2s, transform 0.2s;
   cursor: pointer;
@@ -178,7 +178,7 @@ main, nav, footer { position: relative; z-index: 1; }
   font-size: 0.88rem;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   background: transparent;
   transition: background 0.2s, transform 0.2s;
   cursor: pointer;
@@ -280,6 +280,32 @@ main, nav, footer { position: relative; z-index: 1; }
     margin-top:20px;
     gap:18px;
 }
+.hero-photo-wrapper{
+    margin:0 auto;
+}
+.scroll-indicator{
+    position:absolute;
+    bottom:6rem;
+    left:50%;
+    transform:translateX(-50%);
+    color:var(--green);
+    font-size:.95rem;
+    letter-spacing:2px;
+    font-family:var(--font-mono);
+    animation:bounce 2s infinite;
+    opacity:.7;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+}
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:4rem;
+    align-items:start;
+}
+
 
 
 
@@ -314,8 +340,8 @@ main, nav, footer { position: relative; z-index: 1; }
 }
 
 .hero-photo{
-    width:170px !important;
-    height:170px !important;
+    width:190px !important;
+    height:190px !important;
 }
 
 .hero-grid img{
@@ -356,9 +382,7 @@ main, nav, footer { position: relative; z-index: 1; }
     grid-template-columns:1fr;
 }
 
-.contact-grid{
-    grid-template-columns:1fr;
-    gap:2rem;
+
 }
 .projects-grid{
     grid-template-columns:1fr;
@@ -408,12 +432,20 @@ main, nav, footer { position: relative; z-index: 1; }
     font-size:0.88rem !important;
     line-height:1.7 !important;
 }
-.scroll-indicator{
+ .scroll-indicator{
         display:none;
     }
-
-
+    .hero-photo-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
 }
+.contact-grid{
+    grid-template-columns:1fr;
+    gap:2rem;
+}
+
 
 html,
 body,

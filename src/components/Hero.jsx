@@ -100,25 +100,33 @@ export default function Hero() {
         {/* END LEFT */}
 
         {/* RIGHT — PHOTO + SOCIALS */}
-        <div style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "1.5rem",
-        }}>
-          <div
-  className="hero-photo"
+        <div
   style={{
-  
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    gap: "1.5rem",
+  }}
+>
+          <div
+  className="hero-photo-wrapper"
+  style={{
+    position: "relative",
     width: "260px",
     height: "260px",
+    margin: "0 auto",
   }}
 >
 
             {/* rotating rings */}
             <div style={{
               position: "absolute",
-              inset: "-16px",
+              top: "-16px",
+              left: "-16px",
+              right: "-16px",
+              bottom: "-16px",
               borderRadius: "50%",
               border: "1.5px solid rgba(100,255,218,0.15)",
               borderTopColor: "var(--green)",
@@ -157,7 +165,7 @@ export default function Hero() {
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
-                  objectPosition: "center top",
+                  objectPosition:  "48% top",
                 }}
                 onError={(e) => (e.target.style.display = "none")}
               />
@@ -228,16 +236,9 @@ export default function Hero() {
       {/* END GRID */}
 
       {/* SCROLL DOWN */}
-      <div style={{
-        position:'absolute', bottom:'6rem', left:'50%',
-        transform:'translateX(-50%)',
-        color:'var(--green)', fontSize:'0.95rem',
-        letterSpacing:'2px', fontFamily:'var(--font-mono)',
-        animation:'bounce 2s infinite', opacity:0.7,
-        display:'flex', flexDirection:'column', alignItems:'center', gap:'6px',
-      }}>
-        Scroll ↓
-      </div>
+      <div className="scroll-indicator">
+  Scroll ↓
+</div>
 
       {/* KEYFRAMES */}
       <style>{`
