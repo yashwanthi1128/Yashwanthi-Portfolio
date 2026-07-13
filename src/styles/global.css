@@ -293,7 +293,7 @@ main, nav, footer { position: relative; z-index: 1; }
 }
 .cert-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(4,minmax(0,1fr));
     gap:1.5rem;
 }
 .hero-socials{
@@ -324,6 +324,16 @@ main, nav, footer { position: relative; z-index: 1; }
     grid-template-columns:1fr 1fr;
     gap:4rem;
     align-items:start;
+}
+/* Desktop */
+.footer-socials{
+    display:flex;
+    gap:12px;
+}
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:2rem;
 }
 
 
@@ -402,14 +412,10 @@ main, nav, footer { position: relative; z-index: 1; }
 }
 
 
-}
-.projects-grid{
-    grid-template-columns:1fr;
-}
+ .projects-grid{
+        grid-template-columns:1fr;
+    }
 
-.projects-grid > div{
-    padding:1.3rem !important;
-}
 .footer-grid{
     grid-template-columns:1fr;
     gap:2rem;
@@ -439,8 +445,8 @@ main, nav, footer { position: relative; z-index: 1; }
 }
 
 .cert-grid{
-    grid-template-columns:1fr;
-}
+        grid-template-columns:1fr;
+    }
 
 /* ================= ACHIEVEMENTS ================= */
 
@@ -462,9 +468,26 @@ main, nav, footer { position: relative; z-index: 1; }
     width:100%;
 }
 .contact-grid{
+    display:grid;
     grid-template-columns:1fr;
     gap:2rem;
+    width:100%;
 }
+
+.contact-grid > div{
+    width:100%;
+    min-width:0;   
+}
+.footer-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.footer-socials{
+    justify-content:center;
+}
+}
+
 
 
 html,

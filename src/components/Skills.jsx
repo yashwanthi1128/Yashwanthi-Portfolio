@@ -24,9 +24,10 @@ export default function Skills() {
         <p className="section-label">What I work with</p>
         <h2 className="section-title">Technical Skills</h2>
         <div className="green-line"></div>
-        <div ref={ref} className="fade-in" style={{
-          display:'flex', flexWrap:'wrap', gap:'12px',
-        }}>
+        <div
+  ref={ref}
+  className="fade-in projects-grid"
+>
           {SKILLS.map(skill => (
             <div key={skill}
                  style={{
