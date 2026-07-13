@@ -52,28 +52,15 @@ export default function Navbar() {
           </a>
         ))}
         {/* RESUME BUTTON */}
-        <a href="/Resume_Yashwanthi(6).pdf"
-           download="Resume_Yashwanthi(6).pdf"
-           style={{
-             display: 'inline-flex', alignItems: 'center', gap: '7px',
-             fontFamily: 'var(--font-mono)', fontSize: '0.78rem',
-             color: 'var(--green)', border: '1px solid var(--green)',
-             padding: '8px 16px', borderRadius: '4px',
-             textDecoration: 'none', marginLeft: '12px',
-             transition: 'all 0.3s',
-           }}
-           onMouseEnter={e => {
-             e.currentTarget.style.background = 'var(--green)'
-             e.currentTarget.style.color = 'var(--navy)'
-           }}
-           onMouseLeave={e => {
-             e.currentTarget.style.background = 'transparent'
-             e.currentTarget.style.color = 'var(--green)'
-           }}
+        <a
+         href="/Resume_Yashwanthi(6).pdf"
+         target="_blank"
+        rel="noopener noreferrer"
+        className="resume-btn"
         >
-          <i className="fa-solid fa-file-arrow-down"></i>
-          Resume
-        </a>
+  <i className="fa-solid fa-file-arrow-down"></i>
+  Resume
+</a>
       </div>
 
       {/* HAMBURGER — mobile */}
