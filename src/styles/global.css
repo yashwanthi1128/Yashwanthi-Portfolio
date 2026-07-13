@@ -192,3 +192,46 @@ main, nav, footer { position: relative; z-index: 1; }
   opacity: 1;
   transform: translateY(0);
 }
+/* ================= HERO ================= */
+
+.hero-section{
+    padding:6rem 8rem;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+/* =============== MOBILE ================= */
+
+@media (max-width:768px){
+
+.hero-section{
+    padding:6rem 1.5rem 3rem;
+}
+
+.hero-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:3rem;
+}
+
+.hero-grid p{
+    max-width:100% !important;
+}
+
+.hero-grid > div:first-child{
+    order:2;
+}
+
+.hero-grid > div:last-child{
+    order:1;
+}
+
+.hero-grid img{
+    width:220px;
+    height:220px;
+}
+
+}

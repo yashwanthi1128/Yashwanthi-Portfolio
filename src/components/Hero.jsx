@@ -3,21 +3,28 @@ import { useEffect, useRef } from 'react'
 export default function Hero() {
 
   return (
-    <section id="hero" style={{
-      minHeight: '100vh',
-      display: 'flex', alignItems: 'center',
-      justifyContent: 'center',
-      padding: '6rem 8rem 6rem',
-      position: 'relative', overflow: 'hidden',
-    }}>
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gap: '4rem',
-        alignItems: 'center',
-        maxWidth: '1100px',
-        width: '100%',
-      }}>
+    <section
+  id="hero"
+  className="hero-section"
+  style={{
+    minHeight: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "relative",
+    overflow: "hidden",
+  }}
+>
+      <div
+  className="hero-grid"
+  style={{
+    display: "grid",
+    gap: "4rem",
+    alignItems: "center",
+    maxWidth: "1100px",
+    width: "100%",
+  }}
+>
         {/* LEFT */}
         <div style={{display:'flex', flexDirection:'column', gap:'20px'}}>
 
