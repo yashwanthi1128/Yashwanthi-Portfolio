@@ -31,6 +31,7 @@ const contactSchema = new mongoose.Schema({
 const Contact = mongoose.model('Contact', contactSchema);
 
 // ── API ROUTE — contact form ──
+
 app.post('/api/contact', async (req, res) => {
  
   try {
@@ -69,9 +70,16 @@ app.post('/api/contact', async (req, res) => {
   // any URL that isn't /api/* serves your React app
   // so refreshing on /about doesn't give a 404
 
-
 // ── START SERVER ──
 const PORT = process.env.PORT || 5500;
+
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Portfolio backend is running!",
+  });
+});
+
 app.listen(PORT, () => {
-  console.log(` Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
