@@ -77,13 +77,10 @@ export default function Navbar() {
       </div>
 
       {/* HAMBURGER — mobile */}
-      <button onClick={() => setMenuOpen(o => !o)}
-              style={{
-                display: 'none', flexDirection: 'column',
-                gap: '5px', background: 'none',
-                border: 'none', cursor: 'pointer',
-              }}
-              className="hamburger-btn">
+      <button
+  onClick={() => setMenuOpen(o => !o)}
+  className="hamburger-btn"
+>
         {[0,1,2].map(i => (
           <span key={i} style={{
             width: '24px', height: '2px',

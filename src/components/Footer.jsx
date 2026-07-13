@@ -7,11 +7,14 @@ export default function Footer() {
       width:'100%', boxSizing:'border-box',
     }}>
       <div style={{maxWidth:'1100px', margin:'0 auto'}}>
-        <div style={{
-          display:'grid',
-          gridTemplateColumns:'2fr 1fr 1.5fr 1.5fr',
-          gap:'40px', marginBottom:'48px',
-        }}>
+       <div
+  className="footer-grid"
+  style={{
+    display:'grid',
+    gap:'40px',
+    marginBottom:'48px',
+  }}
+>
           {/* BRAND */}
           <div>
             <div style={{
@@ -125,7 +128,15 @@ export default function Footer() {
         }}/>
 
         {/* BOTTOM */}
-        <div style={{display:'flex', justifyContent:'space-between', flexWrap:'wrap', gap:'12px'}}>
+        <div
+  className="footer-bottom"
+  style={{
+    display:'flex',
+    justifyContent:'space-between',
+    flexWrap:'wrap',
+    gap:'12px'
+  }}
+>
           <p style={{fontSize:'0.78rem', color:'#4a6a8a'}}>
             © 2026 <span style={{color:'var(--green)'}}>Yashwanthi P</span> · All rights reserved.
           </p>

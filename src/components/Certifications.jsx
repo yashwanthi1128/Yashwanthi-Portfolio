@@ -12,11 +12,13 @@ export default function Certifications() {
         <p className="section-label">Credentials</p>
         <h2 className="section-title">Certifications</h2>
         <div className="green-line"></div>
-        <div style={{
-          display:'grid',
-          gridTemplateColumns:'repeat(auto-fit, minmax(240px,1fr))',
-          gap:'1.5rem',
-        }}>
+        <div
+  className="cert-grid"
+  style={{
+    display: "grid",
+    gap: "1.5rem",
+  }}
+>
           {CERTS.map(c => (
             <div key={c.name}
                  style={{

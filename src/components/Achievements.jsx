@@ -10,7 +10,15 @@ export default function Achievements() {
         <p className="section-label">Recognition</p>
         <h2 className="section-title">Achievements</h2>
         <div className="green-line"></div>
-        <ul style={{listStyle:'none', display:'flex', flexDirection:'column', gap:'1rem'}}>
+        <ul
+  className="achievement-list"
+  style={{
+    listStyle: "none",
+    display: "flex",
+    flexDirection: "column",
+    gap: "1rem",
+  }}
+>
           {ACHIEVEMENTS.map((a, i) => (
             <li key={i}
                 style={{

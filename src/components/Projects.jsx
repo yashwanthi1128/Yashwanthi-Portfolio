@@ -48,12 +48,14 @@ export default function Projects() {
         <p className="section-label">What I've built</p>
         <h2 className="section-title">Projects</h2>
         <div className="green-line"></div>
-        <div ref={ref} className="fade-in"
-            style={{
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
-  gap: "2rem"
-}}>
+        <div
+  ref={ref}
+  className="fade-in projects-grid"
+  style={{
+    display: "grid",
+    gap: "2rem"
+  }}
+>
           {PROJECTS.map(p => (
             <div key={p.num}
                  style={{

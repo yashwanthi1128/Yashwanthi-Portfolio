@@ -17,10 +17,10 @@ export default function About() {
         <p className="section-label">Get to know me</p>
         <h2 className="section-title">About Me</h2>
         <div className="green-line"></div>
-        <div ref={ref} className="fade-in" style={{
-          display:'grid', gridTemplateColumns:'1fr 1fr',
-          gap:'4rem', alignItems:'center',
-        }}>
+        <div
+  ref={ref}
+  className="fade-in about-grid"
+>
           <div>
             <p style={{lineHeight:1.9, marginBottom:'1rem', fontSize:'0.95rem', textAlign:'justify'}}>
               I'm an <span className="about-highlight">Information Science graduate</span> from
@@ -36,7 +36,7 @@ export default function About() {
               <span className="about-highlight"> Android applications</span> using Kotlin and Firebase.
             </p>
           </div>
-          <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'1.5rem'}}>
+          <div className="about-stats">
             {[
               { num:'4',    label:'Projects Built'   },
               { num:'7.48', label:'CGPA'             },

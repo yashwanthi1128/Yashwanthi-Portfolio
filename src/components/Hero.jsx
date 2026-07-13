@@ -15,16 +15,7 @@ export default function Hero() {
     overflow: "hidden",
   }}
 >
-      <div
-  className="hero-grid"
-  style={{
-    display: "grid",
-    gap: "4rem",
-    alignItems: "center",
-    maxWidth: "1100px",
-    width: "100%",
-  }}
->
+  <div className="hero-grid">
         {/* LEFT */}
         <div style={{display:'flex', flexDirection:'column', gap:'20px'}}>
 
@@ -94,7 +85,7 @@ export default function Hero() {
           </p>
 
           {/* BUTTONS */}
-          <div style={{display:'flex', gap:'12px', flexWrap:'wrap'}}>
+          <div className="hero-buttons">
             <a href="#projects" className="btn-green">
               <i className="fa-solid fa-folder-open"></i>
               View My Work
@@ -115,7 +106,14 @@ export default function Hero() {
           alignItems: "center",
           gap: "1.5rem",
         }}>
-          <div style={{ position: "relative", width: "260px", height: "260px" }}>
+          <div
+  className="hero-photo"
+  style={{
+    position: "relative",
+    width: "260px",
+    height: "260px",
+  }}
+>
 
             {/* rotating rings */}
             <div style={{
