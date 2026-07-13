@@ -175,12 +175,15 @@ export default function Hero() {
           </div>
 
           {/* SOCIAL LINKS */}
-          <div style={{
-            display: "flex",
-            gap: "14px",
-            justifyContent: "center",
-            flexWrap: "wrap",
-          }}>
+          <div
+  className="hero-socials"
+  style={{
+    display: "flex",
+    gap: "14px",
+    justifyContent: "center",
+    flexWrap: "wrap",
+  }}
+>
             {[
               { href: "https://github.com/yashwanthi1128",            icon: "fa-brands fa-github"      },
               { href: "https://linkedin.com/in/yashwanthipasupuleti", icon: "fa-brands fa-linkedin-in" },

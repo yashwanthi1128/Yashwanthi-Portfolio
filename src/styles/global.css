@@ -276,6 +276,10 @@ main, nav, footer { position: relative; z-index: 1; }
 .cert-grid{
     grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 }
+.hero-socials{
+    margin-top:20px;
+    gap:18px;
+}
 
 
 
@@ -301,17 +305,17 @@ main, nav, footer { position: relative; z-index: 1; }
 }
 
 .hero-grid p{
-    max-width:100% !important;
-    text-align:center !important;
+    text-align:left !important;
+    line-height:1.8;
 }
 
 .hero-grid h1{
-    font-size:2.7rem !important;
+    font-size:2.5rem !important;
 }
 
 .hero-photo{
-    width:220px !important;
-    height:220px !important;
+    width:190px !important;
+    height:190px !important;
 }
 
 .hero-grid img{
@@ -329,6 +333,10 @@ main, nav, footer { position: relative; z-index: 1; }
 .hero-buttons a{
     width:100%;
     justify-content:center;
+}
+.hero-socials{
+    margin-top:15px;
+    gap:15px;
 }
 
 .nav-desktop{
@@ -400,6 +408,9 @@ main, nav, footer { position: relative; z-index: 1; }
     font-size:0.88rem !important;
     line-height:1.7 !important;
 }
+.scroll-indicator{
+        display:none;
+    }
 
 
 }
