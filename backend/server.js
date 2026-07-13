@@ -14,7 +14,7 @@ app.use(express.json());
 // After you run "npm run build" in your React folder,
 // copy the dist/ folder contents into public/
 // OR update this path to point to your React dist folder
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 
 // ── MONGODB CONNECTION ──
 mongoose.connect(process.env.MONGO_URI)
@@ -33,6 +33,7 @@ const Contact = mongoose.model('Contact', contactSchema);
 
 // ── API ROUTE — contact form ──
 app.post('/api/contact', async (req, res) => {
+ 
   try {
     const { name, email, message } = req.body;
 
@@ -63,12 +64,12 @@ app.post('/api/contact', async (req, res) => {
 });
 
 // ── CATCH ALL — serve React app for any other route ──
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// app.get('*', (req, res) => {
+// res.sendFile(path.join(__dirname, 'public', 'index.html'));
   // this makes React Router work properly —
   // any URL that isn't /api/* serves your React app
   // so refreshing on /about doesn't give a 404
-});
+
 
 // ── START SERVER ──
 const PORT = process.env.PORT || 5500;

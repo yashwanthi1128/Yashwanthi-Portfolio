@@ -1,34 +1,80 @@
 import { useState } from 'react'
 
+
 export default function Contact() {
   const [form,    setForm]    = useState({ name:'', email:'', message:'' })
   const [status,  setStatus]  = useState({ msg:'', type:'' })
   const [loading, setLoading] = useState(false)
 
-  const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
+  const handleChange = (e) => {
+  setForm((prev) => ({
+    ...prev,
+    [e.target.name]: e.target.value,
+  }));
+};
 
   const handleSubmit = async () => {
-    if (!form.name || !form.email || !form.message) {
-      setStatus({ msg:'Please fill in all fields.', type:'error' }); return
-    }
-    setLoading(true); setStatus({ msg:'', type:'' })
-    try {
-      const res  = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type':'application/json' },
-        body: JSON.stringify(form),
-      })
-      const data = await res.json()
-      if (data.success) {
-        setStatus({ msg:' Message sent! I\'ll get back to you soon.', type:'success' })
-        setForm({ name:'', email:'', message:'' })
-      } else {
-        setStatus({ msg:'Something went wrong. Please email me directly.', type:'error' })
-      }
-    } catch {
-      setStatus({ msg:'Could not connect. Please email me directly.', type:'error' })
-    } finally { setLoading(false) }
+  // Validation
+  if (!form.name || !form.email || !form.message) {
+    setStatus({
+      msg: "Please fill in all fields.",
+      type: "error",
+    });
+    return;
   }
+
+  setLoading(true);
+  setStatus({
+    msg: "",
+    type: "",
+  });
+
+  try {
+    
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    // Check if response is valid
+    if (!res.ok) {
+      throw new Error("Failed to send message");
+    }
+
+    const data = await res.json();
+
+    if (data.success) {
+      setStatus({
+        msg: "Message sent! I'll get back to you soon.",
+        type: "success",
+      });
+
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } else {
+      setStatus({
+        msg: data.message || "Something went wrong. Please try again.",
+        type: "error",
+      });
+    }
+  } catch (err) {
+    console.error("Contact Form Error:", err);
+
+    setStatus({
+      msg: "Could not connect. Please try again later.",
+      type: "error",
+    });
+  } finally {
+    // This ALWAYS runs
+    setLoading(false);
+  }
+};
 
   const inputStyle = {
     width:'100%', background:'#1e1743',
@@ -78,15 +124,24 @@ export default function Contact() {
                   <i className={c.icon}></i>
                 </div>
                 <div style={{fontSize:'0.9rem'}}>
-                  {c.href
-                    ? <a href={c.href} target={c.href.startsWith('http') ? '_blank' : undefined}
-                         rel="noreferrer"
-                         style={{color:'var(--text)', textDecoration:'none', transition:'color 0.3s'}}
-                         onMouseEnter={e => e.target.style.color = 'var(--green)'}
-                         onMouseLeave={e => e.target.style.color = 'var(--text)'}
-                      >{c.text}</a>
-                    : <span>{c.text}</span>
-                  }
+                  {c.href ? (
+  <a
+    href={c.href}
+    target={c.href.startsWith("http") ? "_blank" : undefined}
+    rel="noreferrer"
+    style={{
+      color: "var(--text)",
+      textDecoration: "none",
+      transition: "color 0.3s",
+    }}
+    onMouseEnter={(e) => (e.target.style.color = "var(--green)")}
+    onMouseLeave={(e) => (e.target.style.color = "var(--text)")}
+  >
+    {c.text}
+  </a>
+) : (
+  <span>{c.text}</span>
+)}
                 </div>
               </div>
             ))}
@@ -94,12 +149,12 @@ export default function Contact() {
 
           {/* FORM */}
           <div>
-            <input name="name"    placeholder="Your Name"    value={form.name}
+            <input type="text" name="name"    placeholder="Your Name"    value={form.name}
                    onChange={handleChange} style={inputStyle}
                    onFocus={e => e.target.style.borderColor = 'var(--green)'}
                    onBlur={e  => e.target.style.borderColor = '#1e1743'}/>
-            <input name="email"   placeholder="Your Email"   value={form.email}
-                   type="email"   onChange={handleChange} style={inputStyle}
+            <input type="email" name="email"   placeholder="Your Email"   value={form.email}
+                   onChange={handleChange} style={inputStyle}
                    onFocus={e => e.target.style.borderColor = 'var(--green)'}
                    onBlur={e  => e.target.style.borderColor = '#1e1743'}/>
             <textarea name="message" placeholder="Your Message" value={form.message}
@@ -107,7 +162,7 @@ export default function Contact() {
                       style={{...inputStyle, minHeight:'130px', resize:'vertical'}}
                       onFocus={e => e.target.style.borderColor = 'var(--green)'}
                       onBlur={e  => e.target.style.borderColor = '#1e1743'}/>
-            <button onClick={handleSubmit} disabled={loading}
+            <button type="button" onClick={handleSubmit} disabled={loading}
                     style={{
                       width:'100%', background:'#1e1743',
                       color:'var(--text)', border:'none',
