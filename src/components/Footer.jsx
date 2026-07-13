@@ -7,12 +7,10 @@ export default function Footer() {
       width:'100%', boxSizing:'border-box',
     }}>
       <div style={{maxWidth:'1100px', margin:'0 auto'}}>
-       <div
+      <div
   className="footer-grid"
   style={{
-    display:'grid',
-    gap:'40px',
-    marginBottom:'48px',
+    marginBottom: "48px",
   }}
 >
           {/* BRAND */}
@@ -128,15 +126,7 @@ export default function Footer() {
         }}/>
 
         {/* BOTTOM */}
-        <div
-  className="footer-bottom"
-  style={{
-    display:'flex',
-    justifyContent:'space-between',
-    flexWrap:'wrap',
-    gap:'12px'
-  }}
->
+        <div className="footer-bottom">
           <p style={{fontSize:'0.78rem', color:'#4a6a8a'}}>
             © 2026 <span style={{color:'var(--green)'}}>Yashwanthi P</span> · All rights reserved.
           </p>

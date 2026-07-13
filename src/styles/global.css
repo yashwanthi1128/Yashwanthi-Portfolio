@@ -238,6 +238,22 @@ main, nav, footer { position: relative; z-index: 1; }
 .hero-grid p{
     max-width:560px;
 }
+/* ================= HERO BUTTONS ================= */
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.hero-buttons .btn-green,
+.hero-buttons .btn-outline{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:auto;          
+}
 /* ================= ABOUT ================= */
 
 .about-grid{
@@ -260,11 +276,13 @@ main, nav, footer { position: relative; z-index: 1; }
     display:grid;
     grid-template-columns:2fr 1fr 1.5fr 1.5fr;
     gap:40px;
+    align-items:start;
 }
 
 .footer-bottom{
     display:flex;
     justify-content:space-between;
+    align-items:center;
     flex-wrap:wrap;
     gap:12px;
 }
@@ -274,7 +292,9 @@ main, nav, footer { position: relative; z-index: 1; }
     gap:12px;
 }
 .cert-grid{
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1.5rem;
 }
 .hero-socials{
     margin-top:20px;
@@ -350,13 +370,12 @@ main, nav, footer { position: relative; z-index: 1; }
 }
 
 .hero-buttons{
-    display:flex;
     flex-direction:column;
-    gap:12px;
     width:100%;
 }
 
-.hero-buttons a{
+.hero-buttons .btn-green,
+.hero-buttons .btn-outline{
     width:100%;
     justify-content:center;
 }
@@ -397,6 +416,11 @@ main, nav, footer { position: relative; z-index: 1; }
     text-align:center;
 }
 
+.footer-bottom{
+    flex-direction:column;
+    text-align:center;
+}
+
 .footer-grid ul{
     align-items:center;
 }
@@ -409,12 +433,7 @@ main, nav, footer { position: relative; z-index: 1; }
     max-width:100% !important;
 }
 
-.footer-bottom{
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    gap:10px;
-}
+
 .skills-container{
     justify-content:center;
 }
@@ -422,6 +441,7 @@ main, nav, footer { position: relative; z-index: 1; }
 .cert-grid{
     grid-template-columns:1fr;
 }
+
 /* ================= ACHIEVEMENTS ================= */
 
 .achievement-list li{
