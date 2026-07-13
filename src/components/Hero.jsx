@@ -109,7 +109,7 @@ export default function Hero() {
           <div
   className="hero-photo"
   style={{
-    position: "relative",
+  
     width: "260px",
     height: "260px",
   }}

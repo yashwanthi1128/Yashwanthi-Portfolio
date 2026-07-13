@@ -314,8 +314,8 @@ main, nav, footer { position: relative; z-index: 1; }
 }
 
 .hero-photo{
-    width:190px !important;
-    height:190px !important;
+    width:170px !important;
+    height:170px !important;
 }
 
 .hero-grid img{
