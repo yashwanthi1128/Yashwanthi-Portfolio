@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <nav style={{
       position: 'fixed', top: 0, width: '100%',
-      background: 'rgba(10,15,44,0.95)',
+      background: '#1e1743',
       backdropFilter: 'blur(12px)',
       padding: '1rem 2rem',
       display: 'flex', justifyContent: 'space-between', alignItems: 'center',
