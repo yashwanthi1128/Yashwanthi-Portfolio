@@ -97,6 +97,16 @@ export default function Navbar() {
               {item.charAt(0).toUpperCase() + item.slice(1)}
             </a>
           ))}
+          <a
+  href="/resume/YashResume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => setMenuOpen(false)}
+  className="mobile-resume"
+>
+  <i className="fa-solid fa-file-arrow-down"></i>
+  Resume
+</a>
         </div>
       )}
     </nav>
