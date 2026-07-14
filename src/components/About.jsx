@@ -22,20 +22,23 @@ export default function About() {
   className="fade-in about-grid"
 >
           <div>
-            <p style={{lineHeight:1.9, marginBottom:'1rem', fontSize:'0.95rem', textAlign:'justify'}}>
-              I'm an <span className="about-highlight">Information Science graduate</span> from
-              Cambridge Institute of Technology, Bengaluru, with a strong passion for full-stack
-              web development. I build modern, responsive, and scalable applications using the
-              MERN stack, focusing on clean architecture and intuitive user experiences.
-            </p>
-            <p style={{lineHeight:1.9, marginBottom:'1rem', fontSize:'0.95rem', textAlign:'justify'}}>
-              I work across the <span className="about-highlight">MERN stack</span> ~ MongoDB,
-              Express.js, React.js, and Node.js, building scalable backends with JWT
-              authentication, RESTful APIs and clean responsive frontends. Additionally,
-              I also develop
-              <span className="about-highlight"> Android applications</span> using Kotlin and Firebase.
-            </p>
-          </div>
+  <p style={{lineHeight:1.9, marginBottom:'1rem', fontSize:'0.95rem', textAlign:'justify'}}>
+    I'm an <span className="about-highlight">Information Science graduate</span> from
+    Cambridge Institute of Technology, Bengaluru (CGPA: 7.48) — passionate about
+    building things that actually work. I write clean, scalable code and turn
+    ideas into fully deployed, real-world applications.
+  </p>
+  <p style={{lineHeight:1.9, marginBottom:'0.5rem', fontSize:'0.95rem', textAlign:'justify'}}>
+    I work across the <span className="about-highlight">MERN stack</span> — React.js,
+    Node.js, Express.js, and MongoDB — building secure backends with JWT authentication
+    and RESTful APIs alongside clean, responsive frontends. I also develop{' '}
+    <span className="about-highlight">Android applications</span> using Kotlin and
+    Firebase, and have experience with Git, GitHub, and deploying applications on
+    cloud platforms. I'm actively seeking a{' '}
+    <span className="about-highlight">software development role</span> where I can
+    contribute, grow, and keep building.
+  </p>
+</div>
           <div className="about-stats">
             {[
               { num:'4',    label:'Projects Built'   },
