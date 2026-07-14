@@ -104,8 +104,7 @@ export default function Contact() {
           {/* INFO */}
           <div>
             <p style={{lineHeight:1.9, marginBottom:'1rem', fontSize:'0.95rem', textAlign:'justify'}}>
-              I'm a fresh graduate actively looking for{' '}
-              <span className="about-highlight"><strong>software development roles</strong></span>{' '} ~ I build things that ship, not just things that run locally. My code is live, my inbox is open, and I respond within 24 hours.
+             Interested in working together? I'm just a message away.
             </p>
             {[
               { icon:'fa-solid fa-envelope',     href:'mailto:yashwanthi1128@gmail.com',              text:'yashwanthi1128@gmail.com'           },

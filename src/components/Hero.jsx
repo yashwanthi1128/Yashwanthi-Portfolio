@@ -34,11 +34,11 @@ export default function Hero() {
               background:'var(--green)', borderRadius:'50%',
               animation:'pulseDot 1.8s ease-in-out infinite',
             }}/>
-            Open to Work ~ Fresher · Full Stack Web Developer
+            Open to Work ~ Full Stack Web Developer
           </div>
 
           <p style={{
-            fontFamily: 'var(--font-mono)',
+            fontFamily: 'var(--font-sans)',
             color: 'var(--green)',
             fontSize: '0.9rem',
             letterSpacing: '3px',
@@ -73,15 +73,11 @@ export default function Hero() {
             maxWidth: '560px',
             textAlign: 'justify',
           }}>
-            A {' '}
-            <span style={{color:'var(--green)', fontWeight:600}}>
-              MERN Stack Developer
-            </span>{' '}
-            and Information Science graduate from Cambridge Institute of Technology, Bengaluru, with hands-on
-            experience building full-stack web applications and Android apps.
-            I work with React.js, Node.js, Express.js, and MongoDB to build
-            scalable, user-friendly solutions ~ actively looking for
-            software development opportunities.
+            A{' '}
+<span style={{ color: 'var(--green)', fontWeight: 600 }}>
+  MERN Stack Developer
+</span>{' '}
+who enjoys turning ideas into fast, scalable, and user-friendly web applications with clean code and thoughtful design.
           </p>
 
           {/* BUTTONS */}

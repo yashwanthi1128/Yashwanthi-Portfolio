@@ -24,19 +24,17 @@ export default function About() {
           <div>
   <p style={{lineHeight:1.9, marginBottom:'1rem', fontSize:'0.95rem', textAlign:'justify'}}>
     I'm an <span className="about-highlight">Information Science graduate</span> from
-    Cambridge Institute of Technology, Bengaluru (CGPA: 7.48) — passionate about
+    Cambridge Institute of Technology, Bengaluru ~ passionate about
     building things that actually work. I write clean, scalable code and turn
     ideas into fully deployed, real-world applications.
   </p>
   <p style={{lineHeight:1.9, marginBottom:'0.5rem', fontSize:'0.95rem', textAlign:'justify'}}>
-    I work across the <span className="about-highlight">MERN stack</span> — React.js,
-    Node.js, Express.js, and MongoDB — building secure backends with JWT authentication
+    I work across the <span className="about-highlight">MERN stack</span> ~ React.js,
+    Node.js, Express.js, and MongoDB, building secure backends with JWT authentication
     and RESTful APIs alongside clean, responsive frontends. I also develop{' '}
     <span className="about-highlight">Android applications</span> using Kotlin and
     Firebase, and have experience with Git, GitHub, and deploying applications on
-    cloud platforms. I'm actively seeking a{' '}
-    <span className="about-highlight">software development role</span> where I can
-    contribute, grow, and keep building.
+    cloud platforms.
   </p>
 </div>
           <div className="about-stats">

@@ -8,7 +8,7 @@ const PROJECTS = [
     desc: 'Architected DevSync ~ a production-ready MERN Stack developer collaboration platform with dual role-based access control. Admins manage full project lifecycle (create, assign, track) while collaborators browse, apply, and manage assigned tasks — all secured via JWT authentication with protected REST API routes. Built 10+ API endpoints with full CRUD, deployed live on Render with automated GitHub CI/CD.',
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT Auth', 'REST API', 'Render', 'GitHub CI/CD'],
     github: 'https://github.com/yashwanthi1128/DevSync',
-    live: 'https://yashwanthi-portfolio-isat.onrender.com/',
+    live: 'https://devsync-my-frontend.onrender.com/',
   },
   {
   num: '02',
