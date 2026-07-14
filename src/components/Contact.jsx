@@ -103,9 +103,6 @@ export default function Contact() {
 
           {/* INFO */}
           <div>
-            <p style={{lineHeight:1.9, marginBottom:'1rem', fontSize:'0.95rem', textAlign:'justify'}}>
-             Interested in working together? I'm just a message away.
-            </p>
             {[
               { icon:'fa-solid fa-envelope',     href:'mailto:yashwanthi1128@gmail.com',              text:'yashwanthi1128@gmail.com'           },
               { icon:'fa-solid fa-phone',         href:'tel:+918088125846',                            text:'+91 8088125846'                      },
