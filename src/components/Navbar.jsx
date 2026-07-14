@@ -82,7 +82,7 @@ export default function Navbar() {
         <div style={{
           position: 'absolute', top: '100%',
           left: 0, width: '100%',
-          background: 'rgba(10,15,44,0.98)',
+          background: '#1e1743',
           padding: '1.5rem 2rem',
           display: 'flex', flexDirection: 'column', gap: '1rem',
           borderBottom: '1px solid rgba(100,255,218,0.1)',
