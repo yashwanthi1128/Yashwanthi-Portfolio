@@ -115,6 +115,15 @@ who enjoys turning ideas into fast, scalable, and user-friendly web applications
     margin: "0 auto",
   }}
 >
+  <div
+  className="hero-right"
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    gap: "1.5rem",
+  }}
+></div>
 
             {/* rotating rings */}
             <div style={{
@@ -161,7 +170,7 @@ who enjoys turning ideas into fast, scalable, and user-friendly web applications
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
-                  objectPosition:  "60% top",
+                  objectPosition:  "48% top",
                 }}
                 onError={(e) => (e.target.style.display = "none")}
               />

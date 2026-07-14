@@ -238,6 +238,9 @@ main, nav, footer { position: relative; z-index: 1; }
 .hero-grid p{
     max-width:560px;
 }
+.hero-right{
+    transform: translateY(20px);
+}
 /* ================= HERO BUTTONS ================= */
 
 .hero-buttons{
