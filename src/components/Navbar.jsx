@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const NAV_ITEMS = ['about','skills','projects','internship','certifications','achievements','contact']
+const NAV_ITEMS = ['about','skills','projects','internship','certifications','achievements','contact','resume']
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
