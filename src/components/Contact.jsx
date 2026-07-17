@@ -99,12 +99,11 @@ export default function Contact() {
         <h2 className="section-title">Get In Touch</h2>
         <div className="grey-line"></div>
         <div
-  className="contact-grid"
-  style={{
-    display: "grid",
-    gap: "4rem",
-  }}
->
+        className="contact-grid"
+        style={{
+        display: "grid",
+        gap: "4rem",
+        }}>
 
           {/* INFO */}
           <div>

@@ -76,13 +76,12 @@ export default function Footer() {
               Find Me On
             </p>
             <div
-  className="footer-socials"
-  style={{
-    display: "flex",
-    gap: "12px",
-    marginBottom: "24px",
-  }}
->
+            className="footer-socials"
+            style={{
+            display: "flex",
+            gap: "12px",
+            marginBottom: "24px",
+            }}>
               {[
                 { icon:'fa-brands fa-github',      href:'https://github.com/yashwanthi1128',            title:'GitHub'   },
                 { icon:'fa-brands fa-linkedin-in',  href:'https://linkedin.com/in/yashwanthipasupuleti', title:'LinkedIn' },

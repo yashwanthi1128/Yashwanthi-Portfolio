@@ -37,19 +37,19 @@ export default function Internship() {
               MindMatrix ~ CL Infotech Pvt.Ltd, Bengaluru
             </div>
             <div style={{fontSize:'0.88rem', lineHeight:1.8, textAlign:'justify'}}>
-  Developed <span className="about-highlight"><strong>Grama Urja</strong></span>,
-  a Kotlin-based Android application for community-driven real-time electricity
-  monitoring across rural villages. Integrated{' '}
-  <span className="about-highlight">Firebase Realtime Database</span> to deliver
-  live power status updates within <span className="about-highlight">2 seconds</span>{' '}
-  of a report, with instant data synchronization across multiple concurrent users
-  from geographically distributed locations. Designed{' '}
-  <span className="about-highlight">2+ multi-screen navigation flows</span> using
-  Android Studio with XML layouts, ensuring an intuitive UI for non-technical
-  rural users to report and track outages in under 3 taps. Leveraged{' '}
-  <span className="about-highlight">Generative AI tools</span> to accelerate
-  development cycles and improve overall implementation quality.
-</div>
+            Developed <span className="about-highlight"><strong>Grama Urja</strong></span>,
+            a Kotlin-based Android application for community-driven real-time electricity
+            monitoring across rural villages. Integrated{' '}
+            <span className="about-highlight">Firebase Realtime Database</span> to deliver
+            live power status updates within <span className="about-highlight">2 seconds</span>{' '}
+            of a report, with instant data synchronization across multiple concurrent users
+            from geographically distributed locations. Designed{' '}
+            <span className="about-highlight">2+ multi-screen navigation flows</span> using
+            Android Studio with XML layouts, ensuring an intuitive UI for non-technical
+            rural users to report and track outages in under 3 taps. Leveraged{' '}
+            <span className="about-highlight">Generative AI tools</span> to accelerate
+            development cycles and improve overall implementation quality.
+           </div>
           </div>
         </div>
       </div>

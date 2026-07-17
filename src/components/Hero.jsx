@@ -77,11 +77,11 @@ export default function Hero() {
             maxWidth: '560px',
             textAlign: 'justify',
           }}>
-            A{' '}
-<span style={{ color: 'var(--grey)', fontWeight: 600 }}>
-  MERN Stack Developer
-</span>{' '}
-who enjoys turning ideas into fast, scalable, and user-friendly web applications with clean code and thoughtful design.
+          A{' '}
+          <span style={{ color: 'var(--grey)', fontWeight: 600 }}>
+          MERN Stack Developer
+          </span>{' '}
+          who enjoys turning ideas into fast, scalable, and user-friendly web applications with clean code and thoughtful design.
           </p>
 
           {/* BUTTONS */}
@@ -101,33 +101,33 @@ who enjoys turning ideas into fast, scalable, and user-friendly web applications
 
         {/* RIGHT — PHOTO + SOCIALS */}
         <div
-  style={{
+        style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+        gap: "1.5rem",
+       }}>
+         
+      <div
+      className="hero-photo-wrapper"
+      style={{
+      position: "relative",
+      width: "260px",
+      height: "260px",
+      margin: "0 auto",
+      }}>
+      
+    <div
+    className="hero-right"
+    style={{
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
     gap: "1.5rem",
-  }}
->
-          <div
-  className="hero-photo-wrapper"
-  style={{
-    position: "relative",
-    width: "260px",
-    height: "260px",
-    margin: "0 auto",
-  }}
->
-  <div
-  className="hero-right"
-  style={{
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    gap: "1.5rem",
-  }}
-></div>
+    }}>
+    </div>
 
             {/* rotating rings */}
             <div style={{

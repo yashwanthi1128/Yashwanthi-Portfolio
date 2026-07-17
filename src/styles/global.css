@@ -1,8 +1,8 @@
-/* ── GOOGLE FONTS ── */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
 
-/* ── DESIGN TOKENS ── */
+
 :root {
   --pink:        #70425b;
   --pink-light:  #3e0d2a;
@@ -19,7 +19,7 @@
   --bg-gradient: linear-gradient(135deg, #220014 65%, #72445f 70%);
 }
 
-/* ── RESET ── */
+
 *, *::before, *::after {
   margin: 0; padding: 0;
   box-sizing: border-box;
@@ -36,7 +36,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ── ANIMATED PINK + PURPLE BACKGROUND ── */
 body {
   font-family: var(--font-sans);
   color: var(--text);
@@ -58,7 +57,7 @@ body {
   100% { background-position: 0%   50%; }
 }
 
-/* breathing vignette — dark edges */
+
 body::before {
   content: '';
   position: fixed;
@@ -74,7 +73,7 @@ body::before {
   100% { opacity: 1.0; }
 }
 
-/* floating purple/pink glow blobs */
+
 body::after {
   content: '';
   position: fixed;
@@ -95,15 +94,15 @@ body::after {
   100% { background-position: 50%  100%; }
 }
 
-/* all content above background */
+
 main, nav, footer { position: relative; z-index: 1; }
 
-/* ── SCROLLBAR ── */
+
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--pink); }
 ::-webkit-scrollbar-thumb { background: var(--grey); border-radius: 3px; }
 
-/* ── SHARED SECTION STYLES ── */
+
 .section-wrap {
   padding: 6rem 1rem;
   max-width: 1100px;
@@ -146,7 +145,7 @@ main, nav, footer { position: relative; z-index: 1; }
   font-weight: 600;
 }
 
-/* ── BUTTONS ── */
+
 .btn-grey {
   border: 1.0px solid var(--grey);
   color: var(--grey);
@@ -190,7 +189,6 @@ main, nav, footer { position: relative; z-index: 1; }
   transform: translateY(-3px);
 }
 
-/* ── FADE IN ANIMATION ── */
 .fade-in {
   opacity: 0;
   transform: translateY(28px);
@@ -201,7 +199,7 @@ main, nav, footer { position: relative; z-index: 1; }
   opacity: 1;
   transform: translateY(0);
 }
-/* ================= HERO ================= */
+
 
 .hero-section{
     width:100%;
@@ -241,7 +239,7 @@ main, nav, footer { position: relative; z-index: 1; }
 .hero-right{
     transform: translateY(20px);
 }
-/* ================= HERO BUTTONS ================= */
+
 
 .hero-buttons{
     display:flex;
@@ -257,7 +255,7 @@ main, nav, footer { position: relative; z-index: 1; }
     justify-content:center;
     width:auto;          
 }
-/* ================= ABOUT ================= */
+
 
 .about-grid{
     display:grid;
@@ -273,7 +271,7 @@ main, nav, footer { position: relative; z-index: 1; }
     grid-template-columns:1fr 1fr;
     gap:1.5rem;
 }
-/* ================= FOOTER ================= */
+
 
 .footer-grid{
     display:grid;
@@ -289,7 +287,7 @@ main, nav, footer { position: relative; z-index: 1; }
     flex-wrap:wrap;
     gap:12px;
 }
-/* ================= SKILLS ================= */
+
 
 .skills-container{
     display:flex;
@@ -335,7 +333,7 @@ main, nav, footer { position: relative; z-index: 1; }
     gap:4rem;
     align-items:start;
 }
-/* Desktop */
+
 .footer-socials{
     display:flex;
     gap:12px;
@@ -370,7 +368,7 @@ main, nav, footer { position: relative; z-index: 1; }
     background:var(--grey);
     color:var(--pink);
 }
-/* Desktop */
+
 .contact-form{
     margin-top:-100px;
   
@@ -489,7 +487,6 @@ main, nav, footer { position: relative; z-index: 1; }
         grid-template-columns:1fr;
     }
 
-/* ================= ACHIEVEMENTS ================= */
 
 .achievement-list li{
     padding:1rem !important;
@@ -528,11 +525,9 @@ main, nav, footer { position: relative; z-index: 1; }
     justify-content:center;
 }
 .resume-btn{
-    margin:0;
-    width:100%;
-    justify-content:center;
-    padding:12px;
-}
+        display: none;
+    }
+
 .mobile-menu{
     position:absolute;
     top:100%;

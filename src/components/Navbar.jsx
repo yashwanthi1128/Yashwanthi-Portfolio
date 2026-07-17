@@ -74,9 +74,9 @@ export default function Navbar() {
         rel="noopener noreferrer"
         className="resume-btn"
         >
-  <i className="fa-solid fa-file-arrow-down"></i>
-  Resume
-</a>
+        <i className="fa-solid fa-file-arrow-down"></i>
+        Resume
+        </a>
       {/* MOBILE MENU */}
       {menuOpen && (
         <div style={{
@@ -98,16 +98,16 @@ export default function Navbar() {
             </a>
           ))}
           <a
-  href="/resume/YashResume.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  onClick={() => setMenuOpen(false)}
-  className="mobile-resume"
->
-  <i className="fa-solid fa-file-arrow-down"></i>
-  Resume
-</a>
-        </div>
+          href="/resume/YashResume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setMenuOpen(false)}
+          className="mobile-resume">
+
+        <i className="fa-solid fa-file-arrow-down"></i>
+        Resume
+        </a>
+      </div>
       )}
     </nav>
   )
