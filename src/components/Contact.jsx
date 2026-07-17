@@ -78,21 +78,26 @@ export default function Contact() {
   }
 };
 
-  const inputStyle = {
-    width:'100%', background:'#1e1743',
-    border:'1px solid rgba(30,58,95,0.8)',
-    color:'var(--white)', padding:'0.9rem 1.1rem',
-    borderRadius:'8px', fontFamily:'var(--font-sans)',
-    fontSize:'0.88rem', marginBottom:'1rem',
-    outline:'none', transition:'border-color 0.3s',
-  }
+ const inputStyle = {
+  width: "100%",
+  background: "var(--purple-mid)",
+  border: "1px solid var(--purple-mid)",
+  color: "var(--white)",
+  padding: "0.9rem 1.1rem",
+  borderRadius: "8px",
+  fontFamily: "var(--font-sans)",
+  fontSize: "0.88rem",
+  marginBottom: "1rem",
+  outline: "none",
+  transition: "border-color 0.3s ease",
+};
 
   return (
     <section id="contact">
       <div className="section-wrap">
         <p className="section-label">Let's connect</p>
         <h2 className="section-title">Get In Touch</h2>
-        <div className="green-line"></div>
+        <div className="grey-line"></div>
         <div
   className="contact-grid"
   style={{
@@ -116,11 +121,11 @@ export default function Contact() {
               }}>
                 <div style={{
                   width:'38px', height:'38px',
-                  background:'#1e1743',
-                  border:'1px solid rgba(100,255,218,0.15)',
+                  background:'var(--purple-mid)',
+                  border:'1px solid rgba(233, 202, 109, 0.64)',
                   borderRadius:'8px',
                   display:'flex', alignItems:'center', justifyContent:'center',
-                  color:'var(--green)', fontSize:'1rem', flexShrink:0,
+                  color:'var(--grey)', fontSize:'1rem', flexShrink:0,
                   transition:'all 0.3s',
                 }}>
                   <i className={c.icon}></i>
@@ -136,7 +141,7 @@ export default function Contact() {
       textDecoration: "none",
       transition: "color 0.3s",
     }}
-    onMouseEnter={(e) => (e.target.style.color = "var(--green)")}
+    onMouseEnter={(e) => (e.target.style.color = "var(--grey)")}
     onMouseLeave={(e) => (e.target.style.color = "var(--text)")}
   >
     {c.text}
@@ -150,42 +155,80 @@ export default function Contact() {
           </div>
 
           {/* FORM */}
-          <div>
-            <input type="text" name="name"    placeholder="Your Name"    value={form.name}
-                   onChange={handleChange} style={inputStyle}
-                   onFocus={e => e.target.style.borderColor = 'var(--green)'}
-                   onBlur={e  => e.target.style.borderColor = '#1e1743'}/>
-            <input type="email" name="email"   placeholder="Your Email"   value={form.email}
-                   onChange={handleChange} style={inputStyle}
-                   onFocus={e => e.target.style.borderColor = 'var(--green)'}
-                   onBlur={e  => e.target.style.borderColor = '#1e1743'}/>
-            <textarea name="message" placeholder="Your Message" value={form.message}
-                      onChange={handleChange}
-                      style={{...inputStyle, minHeight:'130px', resize:'vertical'}}
-                      onFocus={e => e.target.style.borderColor = 'var(--green)'}
-                      onBlur={e  => e.target.style.borderColor = '#1e1743'}/>
-            <button type="button" onClick={handleSubmit} disabled={loading}
-                    style={{
-                      width:'100%', background:'#1e1743',
-                      color:'var(--text)', border:'none',
-                      padding:'0.9rem', borderRadius:'8px',
-                      fontWeight:700, fontSize:'0.95rem',
-                      cursor: loading ? 'not-allowed' : 'pointer',
-                      opacity: loading ? 0.7 : 1,
-                      transition:'transform 0.2s, box-shadow 0.2s',
-                      fontFamily:'var(--font-sans)',
-                    }}
-                    onMouseEnter={e => { if (!loading) e.currentTarget.style.transform = 'translateY(-3px)' }}
-                    onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)' }}>
-              {loading ? 'Sending...' : 'Send Message'}
-            </button>
-            {status.msg && (
-              <p style={{
-                marginTop:'0.75rem', fontSize:'0.88rem', textAlign:'center',
-                color: status.type === 'success' ? '#4ade80' : '#f87171',
-              }}>{status.msg}</p>
-            )}
-          </div>
+         <div className="contact-form">
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    value={form.name}
+    onChange={handleChange}
+    style={inputStyle}
+    onFocus={(e) => (e.target.style.borderColor = "var(--grey)")}
+    onBlur={(e) => (e.target.style.borderColor = "var(--purple-mid)")}
+  />
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    value={form.email}
+    onChange={handleChange}
+    style={inputStyle}
+    onFocus={(e) => (e.target.style.borderColor = "var(--grey)")}
+    onBlur={(e) => (e.target.style.borderColor = "var(--purple-mid)")}
+  />
+
+  <textarea
+    name="message"
+    placeholder="Your Message"
+    value={form.message}
+    onChange={handleChange}
+    style={{ ...inputStyle, minHeight: "130px", resize: "vertical" }}
+    onFocus={(e) => (e.target.style.borderColor = "var(--grey)")}
+    onBlur={(e) => (e.target.style.borderColor = "var(--purple-mid)")}
+  />
+
+  <button
+    type="button"
+    onClick={handleSubmit}
+    disabled={loading}
+    style={{
+      width: "100%",
+      background: "var(--purple-mid)",
+      color: "var(--grey)",
+      border: "none",
+      padding: "0.9rem",
+      borderRadius: "8px",
+      fontWeight: 700,
+      fontSize: "0.95rem",
+      cursor: loading ? "not-allowed" : "pointer",
+      opacity: loading ? 0.7 : 1,
+      transition: "transform 0.2s, box-shadow 0.2s",
+      fontFamily: "var(--font-sans)",
+    }}
+    onMouseEnter={(e) => {
+      if (!loading) e.currentTarget.style.transform = "translateY(-3px)";
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.transform = "translateY(0)";
+    }}
+  >
+    {loading ? "Sending..." : "Send Message"}
+  </button>
+
+  {status.msg && (
+    <p
+      style={{
+        marginTop: "0.75rem",
+        fontSize: "0.88rem",
+        textAlign: "center",
+        color: status.type === "success" ? "#4ade80" : "#f87171",
+      }}
+    >
+      {status.msg}
+    </p>
+  )}
+</div>
 
         </div>
       </div>

@@ -9,7 +9,7 @@ export default function Achievements() {
       <div className="section-wrap">
         <p className="section-label">Recognition</p>
         <h2 className="section-title">Achievements</h2>
-        <div className="green-line"></div>
+        <div className="grey-line"></div>
         <ul
   className="achievement-list"
   style={{
@@ -24,23 +24,23 @@ export default function Achievements() {
                 style={{
                   display:'flex', alignItems:'flex-start', gap:'1rem',
                   padding:'1.2rem 1.5rem',
-                  background:'#1e1743',
-                  border:'1px solid rgba(100,255,218,0.12)',
+                  background:'var(--purple-mid)',
+                  border:'1px solid rgba(255, 216, 100, 0.12)',
                   borderRadius:'12px',
                   transition:'all 0.3s cubic-bezier(0.34,1.56,0.64,1)',
                   cursor:'default',
                 }}
                 onMouseEnter={e => {
                   e.currentTarget.style.transform = 'translateY(-4px)'
-                  e.currentTarget.style.borderColor = 'var(--green)'
+                  e.currentTarget.style.borderColor = 'var(--grey)'
                   e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.3)'
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.borderColor = 'rgba(100,255,218,0.12)'
+                  e.currentTarget.style.borderColor = 'rgba(255, 216, 100, 0.12)'
                   e.currentTarget.style.boxShadow = 'none'
                 }}>
-              <span style={{color:'var(--green)', fontSize:'1.2rem', flexShrink:0}}></span>
+              <span style={{color:'var(--grey)', fontSize:'1.2rem', flexShrink:0}}></span>
               <span style={{fontSize:'0.92rem', lineHeight:1.7}}>{a}</span>
             </li>
           ))}

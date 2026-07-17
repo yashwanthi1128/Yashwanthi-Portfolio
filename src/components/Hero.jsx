@@ -23,15 +23,15 @@ export default function Hero() {
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
             background: 'rgba(100,255,218,0.06)',
-            border: '1px solid rgba(100,255,218,0.25)',
-            color: 'var(--green)',
+            border: '1px solid rgb(247, 197, 116)',
+            color: 'var(--grey)',
             fontSize: '0.75rem', fontFamily: 'var(--font-mono)',
             padding: '7px 16px', borderRadius: '20px',
             width: 'fit-content',
           }}>
             <span style={{
               width:'8px', height:'8px',
-              background:'var(--green)', borderRadius:'50%',
+              background:'var(--grey)', borderRadius:'50%',
               animation:'pulseDot 1.8s ease-in-out infinite',
             }}/>
             Open to Work ~ Full Stack Web Developer
@@ -39,7 +39,7 @@ export default function Hero() {
 
           <p style={{
             fontFamily: 'var(--font-sans)',
-            color: 'var(--green)',
+            color: 'var(--grey)',
             fontSize: '0.9rem',
             letterSpacing: '3px',
             textTransform: 'uppercase',
@@ -54,19 +54,23 @@ export default function Hero() {
             lineHeight: 1.05,
             letterSpacing: '-1px',
           }}>
-            <span style={{
-              background: 'linear-gradient(135deg, #64ffda 0%, #a78bfa 100%)',
-              WebkitBackgroundClip: 'text',
-              fontWeight: 900,
-              fontSize: 'clamp(2.8rem, 5.4vw, 6.5rem)',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}>Yashwanthi P</span>
-          </h1>
+            <span
+          style={{
+          backgroundImage: "linear-gradient(135deg,#b7799d,#ffc99d)",
+          WebkitBackgroundClip: "text",
+          backgroundClip: "text",
+          color: "transparent",
+          WebkitTextFillColor: "transparent",
+          display: "inline-block",
+          }}
+          >
+          Yashwanthi P
+        </span>
+  </h1>
 
           {/* SINGLE PARAGRAPH — no animation */}
           <p style={{
-            fontSize: '1rem',
+            fontSize: '0.95rem',
             color: 'var(--slate-light)',
             lineHeight: 1.9,
             
@@ -74,7 +78,7 @@ export default function Hero() {
             textAlign: 'justify',
           }}>
             A{' '}
-<span style={{ color: 'var(--green)', fontWeight: 600 }}>
+<span style={{ color: 'var(--grey)', fontWeight: 600 }}>
   MERN Stack Developer
 </span>{' '}
 who enjoys turning ideas into fast, scalable, and user-friendly web applications with clean code and thoughtful design.
@@ -82,7 +86,7 @@ who enjoys turning ideas into fast, scalable, and user-friendly web applications
 
           {/* BUTTONS */}
           <div className="hero-buttons">
-            <a href="#projects" className="btn-green">
+            <a href="#projects" className="btn-grey">
               <i className="fa-solid fa-folder-open"></i>
               View My Work
             </a>
@@ -134,8 +138,8 @@ who enjoys turning ideas into fast, scalable, and user-friendly web applications
               bottom: "-16px",
               borderRadius: "50%",
               border: "1.5px solid rgba(100,255,218,0.15)",
-              borderTopColor: "var(--green)",
-              borderRightColor: "var(--green)",
+              borderTopColor: "var(--grey)",
+              borderRightColor: "var(--grey)",
               animation: "spin 8s linear infinite",
             }}/>
 
@@ -143,20 +147,21 @@ who enjoys turning ideas into fast, scalable, and user-friendly web applications
               position: "absolute",
               inset: "-6px",
               borderRadius: "50%",
-              border: "1px solid rgba(150,80,255,0.2)",
-              borderBottomColor: "rgba(150,80,255,0.6)",
-              borderLeftColor: "rgba(150,80,255,0.6)",
+              border: "1px solid rgba(255, 80, 147, 0.2)",
+              borderBottomColor: "rgba(255, 80, 147, 0.6)",
+              borderLeftColor: "rgba(255, 80, 147, 0.6)",
               animation: "spin 5s linear infinite reverse",
-            }}/>
+            }}
+/>
 
             <div style={{
               width: "260px",
               height: "260px",
               borderRadius: "50%",
               overflow: "hidden",
-              border: "3px solid rgba(100,255,218,0.25)",
-              background: "var(--navy-light)",
-              boxShadow: "0 0 40px rgba(100,255,218,0.08), 0 0 80px rgba(120,40,255,0.06)",
+              border: "3px solid rgba(83, 6, 55, 0.84)",
+              background: "var(--pink-light)",
+              boxShadow: "0 0 40px rgba(255, 214, 100, 0.08), 0 0 80px rgb(73, 13, 54)",
               position: "relative",
               zIndex: 1,
               display: "flex",
@@ -178,7 +183,7 @@ who enjoys turning ideas into fast, scalable, and user-friendly web applications
                 position: "absolute",
                 fontSize: "4rem",
                 fontWeight: 700,
-                color: "var(--green)",
+                color: "var(--grey)",
                 fontFamily: "var(--font-mono)",
               }}>
                 
@@ -214,15 +219,15 @@ who enjoys turning ideas into fast, scalable, and user-friendly web applications
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "var(--green)",
-                  border: "1px solid rgba(100,255,218,0.25)",
+                  color: "var(--grey)",
+                  border: "1px solid rgba(255, 221, 100, 0.08)",
                   textDecoration: "none",
                   fontSize: "1.2rem",
                   transition: "0.3s",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = "translateY(-4px)";
-                  e.currentTarget.style.background = "rgba(100,255,218,0.08)";
+                  e.currentTarget.style.background = "rgba(255, 221, 100, 0.08)";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = "translateY(0)";
@@ -248,8 +253,8 @@ who enjoys turning ideas into fast, scalable, and user-friendly web applications
       {/* KEYFRAMES */}
       <style>{`
         @keyframes pulseDot {
-          0%,100% { box-shadow: 0 0 0 0 rgba(100,255,218,0.6); }
-          50%      { box-shadow: 0 0 0 6px rgba(100,255,218,0); }
+          0%,100% { box-shadow: 0 0 0 0 rgba(255, 211, 100, 0.6); }
+          50%      { box-shadow: 0 0 0 6px rgba(255, 206, 100, 0); }
         }
         @keyframes spin {
           from { transform: rotate(0deg); }

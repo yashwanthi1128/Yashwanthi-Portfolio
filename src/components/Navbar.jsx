@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const NAV_ITEMS = ['about','skills','projects','internship','certifications','achievements','contact','resume']
+const NAV_ITEMS = ['about','skills','projects','internship','certifications','achievements','contact']
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -15,18 +15,18 @@ export default function Navbar() {
   return (
     <nav style={{
       position: 'fixed', top: 0, width: '100%',
-      background: '#1e1743',
+      background: 'var(--purple-mid)',
       backdropFilter: 'blur(12px)',
       padding: '1rem 2rem',
       display: 'flex', justifyContent: 'space-between', alignItems: 'center',
       zIndex: 1000,
-      borderBottom: '1px solid rgba(100,255,218,0.08)',
+      borderBottom: '1px solid rgba(255, 193, 100, 0.08)',
       boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.4)' : 'none',
       transition: 'box-shadow 0.3s',
     }}>
       {/* LOGO */}
       <div style={{
-        color: 'var(--green)', fontWeight: 700,
+        color: 'var(--grey)', fontWeight: 700,
         fontSize: '1.4rem', letterSpacing: '1px',
         fontFamily: 'var(--font-mono)'
       }}>
@@ -45,22 +45,13 @@ export default function Navbar() {
                transition: 'color 0.3s',
                fontFamily: 'var(--font-mono)',
              }}
-             onMouseEnter={e => e.target.style.color = 'var(--green)'}
+             onMouseEnter={e => e.target.style.color = 'var(--grey)'}
              onMouseLeave={e => e.target.style.color = 'var(--text)'}
           >
             {item.charAt(0).toUpperCase() + item.slice(1)}
           </a>
         ))}
-        {/* RESUME BUTTON */}
-        <a
-         href="/resume/YashResume.pdf"
-         target="_blank"
-        rel="noopener noreferrer"
-        className="resume-btn"
-        >
-  <i className="fa-solid fa-file-arrow-down"></i>
-  Resume
-</a>
+        
       </div>
 
       {/* HAMBURGER — mobile */}
@@ -71,21 +62,30 @@ export default function Navbar() {
         {[0,1,2].map(i => (
           <span key={i} style={{
             width: '24px', height: '2px',
-            background: 'var(--green)', borderRadius: '2px',
+            background: 'var(--grey)', borderRadius: '2px',
             display: 'block',
           }}/>
         ))}
       </button>
-
+{/* RESUME BUTTON */}
+        <a
+         href="/resume/YashResume.pdf"
+         target="_blank"
+        rel="noopener noreferrer"
+        className="resume-btn"
+        >
+  <i className="fa-solid fa-file-arrow-down"></i>
+  Resume
+</a>
       {/* MOBILE MENU */}
       {menuOpen && (
         <div style={{
           position: 'absolute', top: '100%',
           left: 0, width: '100%',
-          background: '#1e1743',
+          background: 'var(--purple-mid)',
           padding: '1.5rem 2rem',
           display: 'flex', flexDirection: 'column', gap: '1rem',
-          borderBottom: '1px solid rgba(100,255,218,0.1)',
+          borderBottom: '1px solid rgba(255, 214, 100, 0.1)',
         }}>
           {NAV_ITEMS.map(item => (
             <a key={item} href={`#${item}`}

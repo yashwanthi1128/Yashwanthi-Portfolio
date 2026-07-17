@@ -16,7 +16,7 @@ export default function About() {
       <div className="section-wrap">
         <p className="section-label">Get to know me</p>
         <h2 className="section-title">About Me</h2>
-        <div className="green-line"></div>
+        <div className="grey-line"></div>
         <div
   ref={ref}
   className="fade-in about-grid"
@@ -45,22 +45,22 @@ export default function About() {
               { num:'1',    label:'IEEE Publication' },
             ].map(s => (
               <div key={s.label} style={{
-                background:'#1e1743',
-                border:'1px solid rgba(100,255,218,0.15)',
+                background:'var(--purple-mid)',
+                border:'1px solid var(--grey-light)',
                 borderRadius:'10px', padding:'1.5rem',
                 textAlign:'center',
                 transition:'border-color 0.3s, transform 0.3s',
                 cursor:'default',
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.borderColor = 'var(--green)'
+                e.currentTarget.style.borderColor = 'var(--grey)'
                 e.currentTarget.style.transform = 'scale(1.05)'
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.borderColor = 'rgba(100,255,218,0.15)'
+                e.currentTarget.style.borderColor = 'var(--grey-light)'
                 e.currentTarget.style.transform = 'scale(1)'
               }}>
-                <div style={{fontSize:'2.2rem', color:'var(--green)', fontWeight:700}}>{s.num}</div>
+                <div style={{fontSize:'2.2rem', color:'var(--grey)', fontWeight:700}}>{s.num}</div>
                 <div style={{fontSize:'0.78rem', color:'var(--text)', marginTop:'4px'}}>{s.label}</div>
               </div>
             ))}

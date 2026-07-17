@@ -23,14 +23,14 @@ export default function Skills() {
       <div className="section-wrap">
         <p className="section-label">What I work with</p>
         <h2 className="section-title">Technical Skills</h2>
-        <div className="green-line"></div>
+        <div className="grey-line"></div>
         <div ref={ref} className="fade-in skills-container">
           {SKILLS.map(skill => (
             <div key={skill}
                  style={{
                    padding:'10px 20px',
-                   border:'1px solid rgba(100,255,218,0.2)',
-                   background:'#1e1743',
+                   border:'1px solid var(--grey-light)',
+                   background:'var(--purple-mid)',
                    borderRadius:'10px',
                    color:'var(--slate-light)',
                    fontSize:'0.88rem', fontWeight:500,
@@ -38,13 +38,14 @@ export default function Skills() {
                  }}
                  onMouseEnter={e => {
                    e.currentTarget.style.transform = 'translateY(-4px)'
-                   e.currentTarget.style.borderColor = 'var(--green)'
-                   e.currentTarget.style.color = 'var(--green)'
-                   e.currentTarget.style.boxShadow = '0 8px 20px rgba(100,255,218,0.1)'
+                   e.currentTarget.style.borderColor = 'var(--grey)'
+                   e.currentTarget.style.color = 'var(--grey)'
+                   e.currentTarget.style.boxShadow = '0 8px 20px rgba(255, 211, 100, 0.1)'
                  }}
                  onMouseLeave={e => {
                    e.currentTarget.style.transform = 'translateY(0)'
-                   e.currentTarget.style.borderColor = 'rgba(100,255,218,0.2)'
+                   e.currentTarget.style.borderColor = 'var(--grey-light)'
+                   
                    e.currentTarget.style.color = 'var(--slate-light)'
                    e.currentTarget.style.boxShadow = 'none'
                  }}>
